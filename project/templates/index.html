@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MatheArtists</title>
+    <link href="../static/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+  </head>
+  <body>
+    <div class="display-box">
+      <div class="display-image-area">
+        <a href="{{ url_for('static', filename=image_name) }}" download>
+          <img src="{{ url_for('static', filename=image_name) }}" />
+        </a>
+      </div>
+    </div>
+
+  <form method="post">  
+    <div class="choice-box">
+      <h1>Create your Masterpiece</h1>
+        <div class="select function1">
+          <select name="func1" id="func1">
+            <option value="" disabled selected hidden>Function 1</option>
+            <option value="x**2  - math.sin(y**2) + abs(y-x)">x**2  - math.sin(y**2) + abs(y-x)</option>
+            <option value="y**3 - math.cos(x**2) + 2*x">y**3 - math.cos(x**2) + 2*x</option>
+            <option value="y**2  - math.tan(x**2) + abs(x-y)">y**2  - math.tan(x**2) + abs(x-y)</option>
+            <option value="math.cos(y**4) - 2*abs(y-x) + y**2 + x">math.cos(y**4) - 2*abs(y-x) + y**2 + x</option>
+            <option value="4*x*y - math.sin(y**4) - x**2 + y">4*x*y - math.sin(y**4) - x**2 + y</option>
+            <option value="math.tan(y**2) - x*y + math.sin(x**2 + y**2)">math.tan(y**2) - x*y + math.sin(x**2 + y**2)</option>
+          </select>
+        </div>
+
+        <div class="select function2">
+          <select name="func2" id="func2">
+            <option value="" disabled selected hidden>Function 2</option>
+            <option value="x**2  - math.sin(y**2) + abs(y-x)">x**2  - math.sin(y**2) + abs(y-x)</option>
+            <option value="y**3 - math.cos(x**2) + 2*x">y**3 - math.cos(x**2) + 2*x</option>
+            <option value="y**2  - math.tan(x**2) + abs(x-y)">y**2  - math.tan(x**2) + abs(x-y)</option>
+            <option value="math.cos(y**4) - 2*abs(y-x) + y**2 + x">math.cos(y**4) - 2*abs(y-x) + y**2 + x</option>
+            <option value="4*x*y - math.sin(y**4) - x**2 + y">4*x*y - math.sin(y**4) - x**2 + y</option>
+            <option value="math.tan(y**2) - x*y + math.sin(x**2 + y**2)">math.tan(y**2) - x*y + math.sin(x**2 + y**2)</option>
+          </select>
+        </div>
+
+        <!--projection type-->
+        <div class="select">
+          <select name="proj" id="proj">
+            <option value="" disabled selected hidden>Projection type</option>
+            <option value="Rectilinear">Rectilinear</option>
+            <option value="Polar">Polar</option>
+            <option value="Aitoff">Aitoff</option>
+            <option value="Hammer">Hammer</option>
+            <option value="Lambert">Lambert</option>
+            <option value="Mollweide">Mollweide</option>
+          </select>
+        </div>
+
+        <!--color-->
+        <div class="color">
+          <input type="color" id="color" name="color" value="#000000">
+          <label for="color">Select Design Color</label>
+        </div>
+
+        <!--background color-->
+        <div class="color">
+          <input type="color" id="bgcolor" name="bgcolor" value="#ffffff">
+          <label for="bgcolor">Select Background Color</label>
+        </div>
+
+        <button class="button">Create</button>
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
